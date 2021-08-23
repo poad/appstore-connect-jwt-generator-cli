@@ -132,3 +132,5 @@ Temporary Items
 .apdisk
 
 dist
+bin/main.d.ts*
+bin/main.js.map
