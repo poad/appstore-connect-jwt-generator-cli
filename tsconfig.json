@@ -1,15 +1,14 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
     "target": "es2019",
     "module": "commonjs",
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
-    "outDir": "./bin",
-    "rootDir": "./src",
+    "declaration": false,
+    "declarationMap": false,
+    "sourceMap": false,
     "strict": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
   },
-  "exclude": ["node_modules"]
+  "exclude": [ "node_modules", "bin" ]
 }
