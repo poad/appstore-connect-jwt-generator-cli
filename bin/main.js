@@ -130,4 +130,3 @@ catch (e) {
     logger.error(e);
     process.exit(1);
 }
-//# sourceMappingURL=main.js.map
