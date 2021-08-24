@@ -3,6 +3,8 @@
   "compilerOptions": {
     "target": "es2019",
     "module": "commonjs",
+    "outDir": "./bin",
+    "rootDir": "./src",
     "declaration": false,
     "declarationMap": false,
     "sourceMap": false,
@@ -10,5 +12,5 @@
     "noImplicitAny": true,
     "esModuleInterop": true,
   },
-  "exclude": [ "node_modules", "bin" ]
+  "exclude": [ "node_modules" ]
 }
