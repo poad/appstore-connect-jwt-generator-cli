@@ -684,10 +684,15 @@
   dependencies:
     "@types/node" "*"
 
-"@types/node@*", "@types/node@^16.7.1":
+"@types/node@*":
   version "16.7.1"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.7.1.tgz#c6b9198178da504dfca1fd0be9b2e1002f1586f0"
   integrity sha512-ncRdc45SoYJ2H4eWU9ReDfp3vtFqDYhjOsKlFFUDEn8V1Bgr2RjYal8YT5byfadWIRluhPFU6JiDOl0H6Sl87A==
+
+"@types/node@^16.7.2":
+  version "16.7.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.7.2.tgz#0465a39b5456b61a04d98bd5545f8b34be340cb7"
+  integrity sha512-TbG4TOx9hng8FKxaVrCisdaxKxqEwJ3zwHoCWXZ0Jw6mnvTInpaB99/2Cy4+XxpXtjNv9/TgfGSvZFyfV/t8Fw==
 
 "@types/prettier@^2.1.5":
   version "2.3.2"
@@ -930,10 +935,10 @@ anymatch@^3.0.3:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
 
-appstore-connect-jwt-generator-core@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/appstore-connect-jwt-generator-core/-/appstore-connect-jwt-generator-core-0.0.4.tgz#5b4dae8fc994f992f152fad2c18c88070a372ff0"
-  integrity sha512-VIGQIRndp75macS1Yikhep1cS1p1eb8osQcLkV6x+pn8kTYpjDjifgpOHla3LWDmxF2Evsgh6VqdZBql7OvOzQ==
+appstore-connect-jwt-generator-core@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/appstore-connect-jwt-generator-core/-/appstore-connect-jwt-generator-core-1.0.0.tgz#72485447bc629dec6ebc00b0d115215934e31e0a"
+  integrity sha512-kgOPm/esZA13jX3nI2bfhbQIaEhQDXX7nNI+GO7PCoe0ykVC59OTs1bkbLmV4l3+QWXSQ3taVuWvJ60J/gl5yw==
   dependencies:
     "@types/jsonwebtoken" "^8.5.5"
     jsonwebtoken "^8.5.1"
