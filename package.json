@@ -1,6 +1,6 @@
 {
   "name": "appstore-connect-jwt-generator-cli",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "poad",
   "license": "MIT",
   "private": false,
@@ -29,7 +29,7 @@
   "devDependencies": {
     "@babel/preset-typescript": "^7.15.0",
     "@types/jest": "^27.0.1",
-    "@types/node": "^16.7.1",
+    "@types/node": "^16.7.2",
     "@typescript-eslint/eslint-plugin": "^4.29.3",
     "@typescript-eslint/parser": "^4.29.3",
     "babel-jest": "^27.0.6",
@@ -49,7 +49,7 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "appstore-connect-jwt-generator-core": "^0.0.4",
+    "appstore-connect-jwt-generator-core": "^1.0.0",
     "arg": "^5.0.1",
     "chalk": "^4.1.2",
     "log4js": "^6.3.0"
