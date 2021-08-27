@@ -83,10 +83,10 @@ const argConfig = {
     ...aliases,
 };
 try {
-    const args = arg_1.default(argConfig);
+    const args = (0, arg_1.default)(argConfig);
     // eslint-disable-next-line global-require
     const packageJson = require('../package.json');
-    const helpMessage = chalk_1.default `
+    const helpMessage = (0, chalk_1.default) `
     {bold USAGE}
 
         {dim $} {bold ${Object.keys(packageJson.bin).pop()}} [--help] --string {underline some-arg}
@@ -121,7 +121,7 @@ try {
     const certPath = args['--cert'];
     const cert = fs.readFileSync(certPath, { flag: 'r' });
     const token = appstore_connect_jwt_generator_core_1.default.tokenSync(cert, args['--issuerId'], args['--keyId']);
-    logger.info(chalk_1.default `
+    logger.info((0, chalk_1.default) `
 {bold token}
 ${token}
   `);
