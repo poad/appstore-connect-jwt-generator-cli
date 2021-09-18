@@ -4,6 +4,7 @@ import * as fs from 'fs';
 import arg from 'arg';
 import chalk from 'chalk';
 import log4js from 'log4js';
+import path from 'path';
 
 log4js.configure({
   appenders: {
@@ -21,16 +22,16 @@ const logger = log4js.getLogger();
 
 interface ArgsDefinition {
   [key: string]: {
-    type: StringConstructor | BooleanConstructor | NumberConstructor,
-    alias: string
+    type: StringConstructor | BooleanConstructor | NumberConstructor;
+    alias: string;
   };
 }
 
 interface Options {
-  [key: string]: StringConstructor | BooleanConstructor | NumberConstructor,
+  [key: string]: StringConstructor | BooleanConstructor | NumberConstructor;
 }
 interface Aliases {
-  [key: string]: string,
+  [key: string]: string;
 }
 
 const argDef: ArgsDefinition = {
@@ -83,8 +84,7 @@ const argConfig = {
 try {
   const args = arg(argConfig);
 
-  // eslint-disable-next-line global-require
-  const packageJson = require('../package.json');
+  const packageJson = JSON.parse(Buffer.from(fs.readFileSync(path.resolve('package.json'), { flag: 'r' })).toString());
 
   const helpMessage = chalk`
     {bold USAGE}

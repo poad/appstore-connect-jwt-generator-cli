@@ -29,7 +29,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 15.x]
+        node-version: [12.x, 14.x, 16.x]
 
     steps:
       - name: Checkout
@@ -40,16 +40,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
           check-latest: true
           cache: yarn
-      - name: Build
-        run: |
-          yarn install
-          yarn build
 
-      - name: Lint
-        run: |
-          yarn lint
-
-      - name: Test
+      - name: Build & test
         env:
           APPSTORE_ISSUER_ID: ${{ secrets.APPSTORE_ISSUER_ID }}
           APPSTORE_KEY_ID: ${{ secrets.APPSTORE_KEY_ID }}
@@ -59,4 +51,5 @@ jobs:
         run: |
           echo ${APPSTORE_PRIVATE_KEY} | base64 -d > ${APPSTORE_PRIVATE_KEY_FILE_PATH}
           echo "" >> ${APPSTORE_PRIVATE_KEY_FILE_PATH}
-          yarn test
+          yarn install
+          yarn all
