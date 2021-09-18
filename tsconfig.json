@@ -1,8 +1,12 @@
 {
+  "ts-node": {
+    "transpileOnly": true,
+    "transpiler": "ts-node/transpilers/swc-experimental"
+  },
   "compileOnSave": true,
   "compilerOptions": {
-    "target": "es2019",
-    "module": "commonjs",
+    "target": "esnext",
+    "module": "esnext",
     "outDir": "./bin",
     "rootDir": "./src",
     "declaration": false,
@@ -11,6 +15,7 @@
     "strict": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
+    "moduleResolution":"Node",
   },
-  "exclude": [ "node_modules" ]
+  "exclude": ["node_modules", "**/*.test.ts"]
 }
