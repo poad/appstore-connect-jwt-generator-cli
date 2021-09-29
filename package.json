@@ -29,7 +29,7 @@
     "all": "yarn build && yarn lint && yarn test"
   },
   "devDependencies": {
-    "@swc/cli": "^0.1.50",
+    "@swc/cli": "^0.1.51",
     "@swc/core": "^1.2.91",
     "@swc/helpers": "^0.2.13",
     "@swc/jest": "^0.2.4",
