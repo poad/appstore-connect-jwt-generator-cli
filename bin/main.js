@@ -13,3 +13,5 @@ import a from"appstore-connect-jwt-generator-core";import*as b from"fs";import c
 {bold token}
 ${t}
   `)}catch(u){logger.error(u),process.exit(1)}
+
+//# sourceMappingURL=main.js.map
