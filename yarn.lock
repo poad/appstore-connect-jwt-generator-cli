@@ -496,7 +496,7 @@
     jest-haste-map "^27.3.1"
     jest-runtime "^27.3.1"
 
-"@jest/transform@^27.3.0", "@jest/transform@^27.3.1":
+"@jest/transform@^27.3.1":
   version "27.3.1"
   resolved "https://registry.yarnpkg.com/@jest/transform/-/transform-27.3.1.tgz#ff80eafbeabe811e9025e4b6f452126718455220"
   integrity sha512-3fSvQ02kuvjOI1C1ssqMVBKJpZf6nwoCiSu00zAKh5nrp3SptNtZy/8s5deayHnqxhjD9CWDJ+yqQwuQ0ZafXQ==
@@ -1034,20 +1034,6 @@ asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
   integrity sha1-x57Zf380y48robyXkLzDZkdLS3k=
-
-babel-jest@^27.3.0:
-  version "27.3.0"
-  resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-27.3.0.tgz#72237bff40e1fdaaf869bcaaa43bec58b51b6159"
-  integrity sha512-+Utvd2yZkT7tkgbBqVcH3uRpgRSTKRi0uBtVkjmuw2jFxp45rQ9fROSqqeHKzHYRelgdVOtQ3M745Wnyme/xOg==
-  dependencies:
-    "@jest/transform" "^27.3.0"
-    "@jest/types" "^27.2.5"
-    "@types/babel__core" "^7.1.14"
-    babel-plugin-istanbul "^6.0.0"
-    babel-preset-jest "^27.2.0"
-    chalk "^4.0.0"
-    graceful-fs "^4.2.4"
-    slash "^3.0.0"
 
 babel-jest@^27.3.1:
   version "27.3.1"
@@ -2455,7 +2441,7 @@ jest-environment-node@^27.3.1:
     jest-mock "^27.3.0"
     jest-util "^27.3.1"
 
-jest-get-type@^27.0.6, jest-get-type@^27.3.1:
+jest-get-type@^27.3.1:
   version "27.3.1"
   resolved "https://registry.yarnpkg.com/jest-get-type/-/jest-get-type-27.3.1.tgz#a8a2b0a12b50169773099eee60a0e6dd11423eff"
   integrity sha512-+Ilqi8hgHSAdhlQ3s12CAVNd8H96ZkQBfYoXmArzZnOfAtVAJEiPDBirjByEblvG/4LPJmkL+nBqPO3A1YJAEg==
@@ -3295,7 +3281,7 @@ prettier@^2.4.1:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.4.1.tgz#671e11c89c14a4cfc876ce564106c4a6726c9f5c"
   integrity sha512-9fbDAXSBcc6Bs1mZrDYb3XKzDLm4EXXL9sC1LqKP5rZkT6KRr/rf9amVUcODVXgguK/isJz0d0hP72WeaKWsvA==
 
-pretty-format@^27.0.0, pretty-format@^27.3.0, pretty-format@^27.3.1:
+pretty-format@^27.0.0, pretty-format@^27.3.1:
   version "27.3.1"
   resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-27.3.1.tgz#7e9486365ccdd4a502061fa761d3ab9ca1b78df5"
   integrity sha512-DR/c+pvFc52nLimLROYjnXPtolawm+uWDxr4FjuLDLUn+ktWnSN851KoHwHzzqq6rfCOjkzN8FLgDrSub6UDuA==
