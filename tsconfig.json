@@ -6,7 +6,7 @@
   "compileOnSave": true,
   "compilerOptions": {
     "target": "esnext",
-    "module": "esnext",
+    "module": "ES2020",
     "outDir": "./bin",
     "rootDir": "./src",
     "declaration": false,

@@ -2,7 +2,7 @@ import jwt from 'appstore-connect-jwt-generator-core';
 
 import * as fs from 'fs';
 import arg from 'arg';
-import chalk from 'chalk';
+import chalkTemplate from 'chalk-template';
 import log4js from 'log4js';
 import path from 'path';
 
@@ -86,7 +86,7 @@ try {
 
   const packageJson = JSON.parse(Buffer.from(fs.readFileSync(path.resolve('package.json'), { flag: 'r' })).toString());
 
-  const helpMessage = chalk`
+  const helpMessage = chalkTemplate`
     {bold USAGE}
 
         {dim $} {bold ${Object.keys(packageJson.bin).pop()}} [--help] --string {underline some-arg}
@@ -126,7 +126,7 @@ try {
 
   const cert = fs.readFileSync(certPath, { flag: 'r' });
   const token = jwt.tokenSync(cert, args['--issuerId']!, args['--keyId']!);
-  logger.info(chalk`
+  logger.info(chalkTemplate`
 {bold token}
 ${token}
   `);
