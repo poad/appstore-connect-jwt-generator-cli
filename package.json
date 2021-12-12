@@ -29,8 +29,8 @@
     "all": "yarn build && yarn lint && yarn test"
   },
   "devDependencies": {
-    "@swc/cli": "^0.1.52",
-    "@swc/core": "^1.2.118",
+    "@swc/cli": "^0.1.53",
+    "@swc/core": "^1.2.119",
     "@swc/helpers": "^0.3.2",
     "@swc/jest": "^0.2.12",
     "@types/jest": "^27.0.3",
@@ -48,7 +48,7 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jest": "^25.3.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "jest": "^27.4.2",
+    "jest": "^27.4.4",
     "prettier": "^2.5.0",
     "swc-loader": "^0.1.15",
     "ts-node": "^10.4.0",
