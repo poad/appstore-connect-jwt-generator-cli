@@ -679,9 +679,9 @@
   integrity sha512-qEru2uaH1vKZNCZR4rFCUZaflsBP7IWiGcIoQe22qi5tm+HEG/yPdhSba+ZCNTWk2xyYpx/nEFkncDY3orEx3w==
 
 "@swc/jest@^0.2.12":
-  version "0.2.12"
-  resolved "https://registry.yarnpkg.com/@swc/jest/-/jest-0.2.12.tgz#b3ccf1340b8c9178515976cde59f85574cc4125e"
-  integrity sha512-L/fr97Tbpv64O1rqIR1IzmhLYvhlMMBj9z/GEDlSOb9/xWsQCAufDsEXqs6JtQeSriPV8ABRltYBIp4qi7IQhw==
+  version "0.2.14"
+  resolved "https://registry.yarnpkg.com/@swc/jest/-/jest-0.2.14.tgz#75f8ebc9921a618ff07f0205adacddb6422b8f54"
+  integrity sha512-uHrnQA+n0ILmmoEXrZfmQiVl16BXhTHtjhrUEML6Kc7jao7DB6o+8dZznOsm09/ejpwXlksEWOaBEnKIpvkZBw==
   dependencies:
     "@jest/create-cache-key-function" "^27.3.1"
 
@@ -1051,7 +1051,7 @@ asynckit@^0.4.0:
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
   integrity sha1-x57Zf380y48robyXkLzDZkdLS3k=
 
-babel-jest@^27.4.2, babel-jest@^27.4.4:
+babel-jest@^27.4.4:
   version "27.4.4"
   resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-27.4.4.tgz#a012441f8a155df909839543a09510ab3477aa11"
   integrity sha512-+6RVutZxOQgJkt4svgTHPFtOQlVe9dUg3wrimIAM38pY6hL/nsL8glfFSUjD9jNVjaVjzkCzj6loFFecrjr9Qw==
