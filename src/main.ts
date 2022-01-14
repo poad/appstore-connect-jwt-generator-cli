@@ -1,4 +1,4 @@
-import jwt from 'appstore-connect-jwt-generator-core';
+import TokenGenCore from 'appstore-connect-jwt-generator-core';
 
 import * as fs from 'fs';
 import arg from 'arg';
@@ -87,17 +87,17 @@ try {
   const packageJson = JSON.parse(Buffer.from(fs.readFileSync(path.resolve('package.json'), { flag: 'r' })).toString());
 
   const helpMessage = chalkTemplate`
-    {bold USAGE}
+  {bold USAGE}
 
-        {dim $} {bold ${Object.keys(packageJson.bin).pop()}} [--help] --string {underline some-arg}
+      {dim $} {bold ${Object.keys(packageJson.bin).pop()}} [--help] --string {underline some-arg}
 
-    {bold OPTIONS}
-        --help                 Shows this help message
-        --version              Print version of this module
-        --cert {underline cert-file-path}  Private certificate file path for AppStore Connect API
-        --keyId {underline key-id}         Key ID for AppStore Connect API
-        --issuerId {underline issuer-id}   Issuer ID for AppStore Connect API
-  `;
+  {bold OPTIONS}
+      --help                 Shows this help message
+      --version              Print version of this module
+      --cert {underline cert-file-path}  Private certificate file path for AppStore Connect API
+      --keyId {underline key-id}         Key ID for AppStore Connect API
+      --issuerId {underline issuer-id}   Issuer ID for AppStore Connect API
+`;
 
   if (args['--help'] !== undefined) {
     logger.error(helpMessage);
@@ -125,11 +125,11 @@ try {
   const certPath = args['--cert']!;
 
   const cert = fs.readFileSync(certPath, { flag: 'r' });
-  const token = jwt.tokenSync(cert, args['--issuerId']!, args['--keyId']!);
+  const token = TokenGenCore.tokenSync(cert, args['--issuerId']!, args['--keyId']!, undefined);
   logger.info(chalkTemplate`
 {bold token}
 ${token}
-  `);
+`);
 } catch (e) {
   logger.error(e);
   process.exit(1);
