@@ -4,7 +4,9 @@
       "syntax": "typescript",
       "tsx": false,
       "decorators": true,
-      "dynamicImport": true
+      "dynamicImport": true,
+      "exportDefaultFrom": true,
+      "decoratorsBeforeExport": true
     },
     "minify": {
       "compress": {
@@ -21,10 +23,10 @@
       }
     }
   },
-  "minify": true,
+  "minify": false,
   "module": {
     "type": "es6",
-    "strict": true,
+    "strict": false,
     "strictMode": true,
     "lazy": false,
     "noInterop": false
