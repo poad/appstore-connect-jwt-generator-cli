@@ -1193,10 +1193,10 @@ caniuse-lite@^1.0.30001286:
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001299.tgz#d753bf6444ed401eb503cbbe17aa3e1451b5a68c"
   integrity sha512-iujN4+x7QzqA2NCSrS5VUy+4gLmRd4xv6vbBBsmfVqTx8bLAD8097euLqQgKxSVLvxjSDcvF1T/i9ocgnUFexw==
 
-chalk-template@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/chalk-template/-/chalk-template-0.2.0.tgz#b8da6cc36cf4f868318b9bc7f93c075df144cd72"
-  integrity sha512-H7YkR8dEw0oSwfcPdnPh5h3lG8r/oZgu9GXMfbBcF3aguZHnJUWrQb/YSBdoIgt0e4oBDymKFXfUQDHd20VSnA==
+chalk-template@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/chalk-template/-/chalk-template-0.3.0.tgz#e4af3335250652d50e95a5e45e2880e12ed44523"
+  integrity sha512-YTaU+FBbio5Ls24ZxV5GtKqy94NAZMYtAsmqYFkQZlUYybAT5FAbm9HIlFdPU+PaOs1wFQODTMOHjqTAFZ7xqg==
   dependencies:
     chalk "^4.1.2"
 
