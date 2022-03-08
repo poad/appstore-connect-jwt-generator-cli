@@ -1,11 +1,11 @@
-import a from "appstore-connect-jwt-generator-core";
-import * as b from "fs";
-import c from "arg";
+import h from "appstore-connect-jwt-generator-core";
+import * as c from "fs";
+import i from "arg";
 import d from "chalk-template";
 import e from "log4js";
-import f from "path";
+import j from "path";
 e.configure(JSON.parse("{\"appenders\":{\"out\":{\"layout\":{\"pattern\":\"%m%n\",\"type\":\"pattern\"},\"type\":\"stdout\"}},\"categories\":{\"default\":{\"appenders\":[\"out\"],\"level\":\"info\"}}}"));
-const g = e.getLogger(), h = {
+const b = e.getLogger(), f = {
     "--help": {
         type: Boolean,
         alias: "-h"
@@ -26,23 +26,23 @@ const g = e.getLogger(), h = {
         type: String,
         alias: "-i"
     }
-}, i = Object.keys(h).map((a)=>{
+}, k = Object.keys(f).map((a)=>{
     const b = JSON.parse("{}");
-    return b[a] = h[a].type, b;
+    return b[a] = f[a].type, b;
 }).reduce((a, b)=>Object.assign(b, a)
-), j = Object.keys(h).map((a)=>{
+), l = Object.keys(f).map((a)=>{
     const b = JSON.parse("{}");
-    return b[h[a].alias] = a, b;
+    return b[f[a].alias] = a, b;
 }).reduce((a, b)=>Object.assign(b, a)
 );
 try {
-    const k = c({
-        ...i,
-        ...j
-    }), l = JSON.parse(Buffer.from(b.readFileSync(f.resolve("package.json"), JSON.parse("{\"flag\":\"r\"}"))).toString()), m = d`
+    const a = i({
+        ...k,
+        ...l
+    }), g = JSON.parse(Buffer.from(c.readFileSync(j.resolve("package.json"), JSON.parse("{\"flag\":\"r\"}"))).toString()), m = d`
   {bold USAGE}
 
-      {dim $} {bold ${Object.keys(l.bin).pop()}} [--help] --string {underline some-arg}
+      {dim $} {bold ${Object.keys(g.bin).pop()}} [--help] --string {underline some-arg}
 
   {bold OPTIONS}
       --help                 Shows this help message
@@ -51,12 +51,12 @@ try {
       --keyId {underline key-id}         Key ID for AppStore Connect API
       --issuerId {underline issuer-id}   Issuer ID for AppStore Connect API
 `;
-    void 0 !== k["--help"] && (g.error(m), process.exit(0)), void 0 !== k["--version"] && (g.info(l.version), process.exit(0)), void 0 === k["--cert"] && (g.error("The certificate file path must be specified."), process.exit(1)), void 0 === k["--keyId"] && (g.error("Key ID must be specified."), process.exit(1)), void 0 === k["--issuerId"] && (g.error("Issuer ID must be specified."), process.exit(1));
-    const n = k["--cert"], o = b.readFileSync(n, JSON.parse("{\"flag\":\"r\"}")), p = a.tokenSync(o, k["--issuerId"], k["--keyId"], void 0);
-    g.info(d`
+    void 0 !== a["--help"] && (b.error(m), process.exit(0)), void 0 !== a["--version"] && (b.info(g.version), process.exit(0)), void 0 === a["--cert"] && (b.error("The certificate file path must be specified."), process.exit(1)), void 0 === a["--keyId"] && (b.error("Key ID must be specified."), process.exit(1)), void 0 === a["--issuerId"] && (b.error("Issuer ID must be specified."), process.exit(1));
+    const n = a["--cert"], o = c.readFileSync(n, JSON.parse("{\"flag\":\"r\"}")), p = h.tokenSync(o, a["--issuerId"], a["--keyId"], void 0);
+    b.info(d`
 {bold token}
 ${p}
 `);
 } catch (q) {
-    g.error(q), process.exit(1);
+    b.error(q), process.exit(1);
 }

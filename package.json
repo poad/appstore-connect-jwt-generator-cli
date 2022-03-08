@@ -1,6 +1,6 @@
 {
   "name": "appstore-connect-jwt-generator-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "poad",
   "license": "MIT",
   "private": false,
@@ -56,7 +56,7 @@
     "typescript": "^4.6.2"
   },
   "dependencies": {
-    "appstore-connect-jwt-generator-core": "^1.1.6",
+    "appstore-connect-jwt-generator-core": "^1.1.7",
     "arg": "^5.0.1",
     "chalk": "^5.0.0",
     "chalk-template": "^0.4.0",
