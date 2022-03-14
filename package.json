@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@swc/cli": "^0.1.55",
-    "@swc/core": "^1.2.152",
+    "@swc/core": "^1.2.154",
     "@swc/helpers": "^0.3.6",
     "@swc/jest": "^0.2.20",
     "@types/jest": "^27.4.1",
@@ -40,7 +40,7 @@
     "babel-jest": "^27.5.1",
     "eslint": "^8.11.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-airbnb-typescript": "^16.1.1",
+    "eslint-config-airbnb-typescript": "^16.1.2",
     "eslint-config-import": "^0.13.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-typescript": "^2.5.0",
