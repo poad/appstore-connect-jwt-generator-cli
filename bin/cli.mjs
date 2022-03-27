@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-export * from "./main.mjs";
+export * from './main.mjs';
