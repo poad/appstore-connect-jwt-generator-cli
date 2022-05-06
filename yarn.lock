@@ -1014,9 +1014,9 @@ anymatch@^3.0.3:
     picomatch "^2.0.4"
 
 appstore-connect-jwt-generator-core@*:
-  version "1.1.11"
-  resolved "https://registry.yarnpkg.com/appstore-connect-jwt-generator-core/-/appstore-connect-jwt-generator-core-1.1.11.tgz#fdb122792589d5e3838e3b7341d95af14a265e5c"
-  integrity sha512-QvegTdNiGdC0VywmUHnRMtiXxzfaEgJ1vIQflZVa+0oLnG9SoThaKLT07kx8dBv7x4kB1EDJ8d6Ioth0j10EMg==
+  version "1.1.12"
+  resolved "https://registry.yarnpkg.com/appstore-connect-jwt-generator-core/-/appstore-connect-jwt-generator-core-1.1.12.tgz#a72bd321105e7e01885470695ea190dc8d85718f"
+  integrity sha512-jokaZ1wOUPBs7ZnJzitIqIa1k3HTylsPn3TpTQtUaPKKIpeosismdo7OnDKWUoI4Nv4Yoj8k90jfTJq7riRtgA==
   dependencies:
     "@types/jsonwebtoken" "^8.5.8"
     jsonwebtoken "^8.5.1"
@@ -1428,9 +1428,9 @@ ecdsa-sig-formatter@1.0.11:
     safe-buffer "^5.0.1"
 
 electron-to-chromium@^1.4.118:
-  version "1.4.135"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.135.tgz#191e70540ffdb78f6fd7769cd3ae3d4943074656"
-  integrity sha512-jrww0WXvJYEUvhhNso4dobAhc7RXWmzOou9dciZ4UrtlSRwR6sNtXgrStyOGHT0P0oK3Rxr+Z47GNcbKXG+iSA==
+  version "1.4.136"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.136.tgz#b6a3595a9c29d6d8f60e092d40ac24f997e4e7ef"
+  integrity sha512-GnITX8rHnUrIVnTxU9UlsTnSemHUA2iF+6QrRqxFbp/mf0vfuSc/goEyyQhUX3TUUCE3mv/4BNuXOtaJ4ur0eA==
 
 emittery@^0.10.2:
   version "0.10.2"
