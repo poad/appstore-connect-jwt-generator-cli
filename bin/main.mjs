@@ -29,12 +29,10 @@ let b = e.getLogger(), f = {
 }, k = Object.keys(f).map((a)=>{
     let b = JSON.parse("{}");
     return b[a] = f[a].type, b;
-}).reduce((a, b)=>Object.assign(b, a)
-), l = Object.keys(f).map((a)=>{
+}).reduce((a, b)=>Object.assign(b, a)), l = Object.keys(f).map((a)=>{
     let b = JSON.parse("{}");
     return b[f[a].alias] = a, b;
-}).reduce((a, b)=>Object.assign(b, a)
-);
+}).reduce((a, b)=>Object.assign(b, a));
 try {
     let a = i({
         ...k,
