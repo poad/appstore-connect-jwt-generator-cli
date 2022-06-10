@@ -6,9 +6,9 @@
   "private": false,
   "homepage": "https://github.com/poad/appstore-connect-jwt-generator-cli#readme",
   "bin": {
-    "jwt-gen": "bin/index.mjs"
+    "jwt-gen": "bin/cli.mjs"
   },
-  "main": "bin/index.mjs",
+  "main": "bin/cli.mjs",
   "type": "module",
   "repository": {
     "type": "git",
@@ -70,8 +70,8 @@
   ],
   "exports": {
     ".": {
-      "node": "./bin/index.js",
-      "default": "./bin/index.js"
+      "node": "./bin/cli.js",
+      "default": "./bin/cli.js"
     }
   },
   "engines": {
