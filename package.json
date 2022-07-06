@@ -8,7 +8,7 @@
   "bin": {
     "jwt-gen": "bin/index.mjs"
   },
-  "main": "bin/index.mjs",
+  "main": "bin/cli.mjs",
   "type": "module",
   "repository": {
     "type": "git",

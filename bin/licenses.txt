@@ -1,13 +1,3 @@
-appstore-connect-jwt-generator-cli
-MIT
-appstore-connect-jwt-generator-cli
-MIT
-appstore-connect-jwt-generator-cli
-MIT
-appstore-connect-jwt-generator-cli
-MIT
-appstore-connect-jwt-generator-cli
-MIT
 ansi-styles
 MIT
 MIT License
