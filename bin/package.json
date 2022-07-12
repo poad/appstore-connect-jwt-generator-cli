@@ -31,13 +31,13 @@
   },
   "devDependencies": {
     "@swc/cli": "^0.1.57",
-    "@swc/core": "^1.2.210",
+    "@swc/core": "^1.2.212",
     "@swc/helpers": "^0.4.3",
     "@swc/jest": "^0.2.21",
     "@types/jest": "^28.1.4",
     "@types/node": "^18.0.3",
-    "@typescript-eslint/eslint-plugin": "^5.30.5",
-    "@typescript-eslint/parser": "^5.30.5",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
     "@vercel/ncc": "^0.34.0",
     "babel-jest": "^28",
     "eslint": "^8.19.0",
@@ -45,7 +45,7 @@
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-import": "^0.13.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-import-resolver-typescript": "^3.2.1",
+    "eslint-import-resolver-typescript": "^3.2.5",
     "eslint-plugin-flowtype": "^8.0.3",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest": "^26.5.3",
@@ -62,7 +62,7 @@
     "arg": "^5.0.2",
     "chalk": "^5.0.1",
     "chalk-template": "^0.4.0",
-    "log4js": "^6.5.2"
+    "log4js": "^6.6.0"
   },
   "files": [
     "package.json",
