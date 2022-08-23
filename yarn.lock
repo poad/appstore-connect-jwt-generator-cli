@@ -764,10 +764,10 @@
     "@swc/core-win32-ia32-msvc" "1.2.241"
     "@swc/core-win32-x64-msvc" "1.2.241"
 
-"@swc/helpers@^0.4.7":
-  version "0.4.7"
-  resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.4.7.tgz#25a32e462e799a5a102eb9c241f73bbc4cb806a7"
-  integrity sha512-jJKr/2JOivCQxb5Xpli3asedRLH34QgJ3G+7gm6CoCOwt/LDDX9g67OuxvjFOiYZfngWYB66ZbjU6cUNtQdavg==
+"@swc/helpers@^0.4.8":
+  version "0.4.8"
+  resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.4.8.tgz#1d948674795ccf17ecbdd5f77334c126d3e6ca1e"
+  integrity sha512-thsHeP6kpI19KRx3GLW5NZh52w/z07MUoi6rXyj1yfYB03AtT0v/CL12+qP4zaS1ndXEV0xCXNNCN3DJqv2ByQ==
   dependencies:
     tslib "^2.4.0"
 
