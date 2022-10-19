@@ -520,7 +520,7 @@
     jest-haste-map "^29.2.1"
     slash "^3.0.0"
 
-"@jest/transform@^29.2.0", "@jest/transform@^29.2.1":
+"@jest/transform@^29.2.1":
   version "29.2.1"
   resolved "https://registry.yarnpkg.com/@jest/transform/-/transform-29.2.1.tgz#f3d8154edd19cdbcaf1d6646bd8f4ff7812318a2"
   integrity sha512-xup+iEuaIRSQabQaeqxaQyN0vg1Dctrp9oTObQsNf3sZEowTIa5cANYuoyi8Tqhg4GCqEVLTf18KW7ii0UeFVA==
@@ -1147,20 +1147,7 @@ array.prototype.flat@^1.2.5:
     es-abstract "^1.19.2"
     es-shim-unscopables "^1.0.0"
 
-babel-jest@^29:
-  version "29.2.0"
-  resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-29.2.0.tgz#088624f037da90e69a06073305276cbd111d68a8"
-  integrity sha512-c8FkrW1chgcbyBqOo7jFGpQYfVnb43JqjQGV+C2r94k2rZJOukYOZ6+csAqKE4ms+PHc+yevnONxs27jQIxylw==
-  dependencies:
-    "@jest/transform" "^29.2.0"
-    "@types/babel__core" "^7.1.14"
-    babel-plugin-istanbul "^6.1.1"
-    babel-preset-jest "^29.2.0"
-    chalk "^4.0.0"
-    graceful-fs "^4.2.9"
-    slash "^3.0.0"
-
-babel-jest@^29.2.1:
+babel-jest@^29, babel-jest@^29.2.1:
   version "29.2.1"
   resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-29.2.1.tgz#213c47e28072de11bdb98c9d29b89f2ab99664f1"
   integrity sha512-gQJwArok0mqoREiCYhXKWOgUhElJj9DpnssW6GL8dG7ARYqHEhrM9fmPHTjdqEGRVXZAd6+imo3/Vwa8TjLcsw==
