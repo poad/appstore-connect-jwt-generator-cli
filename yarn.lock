@@ -1166,11 +1166,11 @@ array.prototype.flat@^1.2.5:
     es-shim-unscopables "^1.0.0"
 
 babel-jest@^29, babel-jest@^29.2.2:
-  version "29.2.2"
-  resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-29.2.2.tgz#2c15abd8c2081293c9c3f4f80a4ed1d51542fee5"
-  integrity sha512-kkq2QSDIuvpgfoac3WZ1OOcHsQQDU5xYk2Ql7tLdJ8BVAYbefEXal+NfS45Y5LVZA7cxC8KYcQMObpCt1J025w==
+  version "29.3.0"
+  resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-29.3.0.tgz#31fd7ef97dd6a77ddd1b4ab1f8cf77c29e20bb5c"
+  integrity sha512-LzQWdGm6hUugVeyGpIKI/T4SVT+PgAA5WFPqBDbneK7C/PqfckNb0tc4KvcKXq/PLA1yY6wTvB8Bc/REQdUxFg==
   dependencies:
-    "@jest/transform" "^29.2.2"
+    "@jest/transform" "^29.3.0"
     "@types/babel__core" "^7.1.14"
     babel-plugin-istanbul "^6.1.1"
     babel-preset-jest "^29.2.0"
