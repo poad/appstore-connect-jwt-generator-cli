@@ -62,7 +62,7 @@
     "arg": "^5.0.2",
     "chalk": "^5.1.2",
     "chalk-template": "^0.4.0",
-    "log4js": "^6.7.0"
+    "log4js": "^6.7.1"
   },
   "files": [
     "package.json",
