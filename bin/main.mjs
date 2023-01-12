@@ -37,10 +37,10 @@ let p = i.getLogger(), a = {
     ...l
 };
 try {
-    let d = t(c), f = JSON.parse(Buffer.from(r.readFileSync(s.resolve('package.json'), JSON.parse('{"flag":"r"}'))).toString()), u = o`
+    let i = t(c), a = JSON.parse(Buffer.from(r.readFileSync(s.resolve('package.json'), JSON.parse('{"flag":"r"}'))).toString()), n = o`
   {bold USAGE}
 
-      {dim $} {bold ${Object.keys(f.bin).pop()}} [--help] --string {underline some-arg}
+      {dim $} {bold ${Object.keys(a.bin).pop()}} [--help] --string {underline some-arg}
 
   {bold OPTIONS}
       --help                 Shows this help message
@@ -49,12 +49,12 @@ try {
       --keyId {underline key-id}         Key ID for AppStore Connect API
       --issuerId {underline issuer-id}   Issuer ID for AppStore Connect API
 `;
-    void 0 !== d['--help'] && (p.error(u), process.exit(0)), void 0 !== d['--version'] && (p.info(f.version), process.exit(0)), void 0 === d['--cert'] && (p.error('The certificate file path must be specified.'), process.exit(1)), void 0 === d['--keyId'] && (p.error('Key ID must be specified.'), process.exit(1)), void 0 === d['--issuerId'] && (p.error('Issuer ID must be specified.'), process.exit(1));
-    let m = d['--cert'], y = r.readFileSync(m, JSON.parse('{"flag":"r"}')), g = e.tokenSync(y, d['--issuerId'], d['--keyId'], void 0);
+    void 0 !== i['--help'] && (p.error(n), process.exit(0)), void 0 !== i['--version'] && (p.info(a.version), process.exit(0)), void 0 === i['--cert'] && (p.error('The certificate file path must be specified.'), process.exit(1)), void 0 === i['--keyId'] && (p.error('Key ID must be specified.'), process.exit(1)), void 0 === i['--issuerId'] && (p.error('Issuer ID must be specified.'), process.exit(1));
+    let l = i['--cert'], d = r.readFileSync(l, JSON.parse('{"flag":"r"}')), f = e.tokenSync(d, i['--issuerId'], i['--keyId'], void 0);
     p.info(o`
 {bold token}
-${g}
+${f}
 `);
-} catch (I) {
-    p.error(I), process.exit(1);
+} catch (e) {
+    p.error(e), process.exit(1);
 }
