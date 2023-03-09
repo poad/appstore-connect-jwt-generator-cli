@@ -64,7 +64,7 @@
     "chalk": "^5.2.0",
     "chalk-template": "^0.5.0",
     "got": ">=11.8.5",
-    "log4js": "^6.7.1"
+    "log4js": "^6.9.1"
   },
   "resolutions": {
     "jsonwebtoken": ">=9.0.0",
