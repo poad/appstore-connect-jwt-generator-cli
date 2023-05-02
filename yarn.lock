@@ -1451,7 +1451,6 @@ cliui@^8.0.1:
 
 "cliui@github:isaacs/cliui#isaacs/esm-cjs-consistency":
   version "8.0.1"
-  uid "9f97090165675fdda63a79c29bc36bb1033506b0"
   resolved "https://codeload.github.com/isaacs/cliui/tar.gz/9f97090165675fdda63a79c29bc36bb1033506b0"
   dependencies:
     string-width "^5.1.2"
@@ -1658,9 +1657,9 @@ ecdsa-sig-formatter@1.0.11:
     safe-buffer "^5.0.1"
 
 electron-to-chromium@^1.4.284:
-  version "1.4.378"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.378.tgz#73431ffd5fffebc18b4e897fac2e7d4ae6d559d9"
-  integrity sha512-RfCD26kGStl6+XalfX3DGgt3z2DNwJS5DKRHCpkPq5T/PqpZMPB1moSRXuK9xhkt/sF57LlpzJgNoYl7mO7Z6w==
+  version "1.4.379"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.379.tgz#c9b597e090ce738e7a76db84e5678f27817bd644"
+  integrity sha512-eRMq6Cf4PhjB14R9U6QcXM/VRQ54Gc3OL9LKnFugUIh2AXm3KJlOizlSfVIgjH76bII4zHGK4t0PVTE5qq8dZg==
 
 emittery@^0.13.1:
   version "0.13.1"
