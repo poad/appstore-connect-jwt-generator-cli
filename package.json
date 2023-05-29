@@ -63,7 +63,7 @@
     "arg": "^5.0.2",
     "chalk": "^5.2.0",
     "chalk-template": "^1.0.0",
-    "got": ">=11.8.5",
+    "got": ">=13.0.0",
     "log4js": "^6.9.1"
   },
   "resolutions": {
