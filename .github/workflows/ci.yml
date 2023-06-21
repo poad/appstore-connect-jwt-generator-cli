@@ -44,12 +44,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 8.6.3
+          run_install: |
+            - recursive: true
+              args: [--no-frozen-lockfile]
+        
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           check-latest: true
-          cache: yarn
 
       - name: Build & test
         env:
@@ -61,5 +70,4 @@ jobs:
         run: |
           echo ${APPSTORE_PRIVATE_KEY} | base64 -d > ${APPSTORE_PRIVATE_KEY_FILE_PATH}
           echo "" >> ${APPSTORE_PRIVATE_KEY_FILE_PATH}
-          yarn install
           yarn all
