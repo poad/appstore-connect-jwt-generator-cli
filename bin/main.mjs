@@ -26,21 +26,21 @@ let p = i.getLogger(), a = {
         type: String,
         alias: '-i'
     }
-}, n = Object.keys(a).map((e)=>{
-    let r = JSON.parse("{}");
-    return r[e] = a[e].type, r;
-}).reduce((e, r)=>Object.assign(r, e)), l = Object.keys(a).map((e)=>{
-    let r = JSON.parse("{}");
-    return r[a[e].alias] = e, r;
-}).reduce((e, r)=>Object.assign(r, e)), c = {
+}, n = Object.keys(a).map((p)=>{
+    let n = JSON.parse("{}");
+    return n[p] = a[p].type, n;
+}).reduce((p, a)=>Object.assign(a, p)), l = Object.keys(a).map((p)=>{
+    let n = JSON.parse("{}");
+    return n[a[p].alias] = p, n;
+}).reduce((p, a)=>Object.assign(a, p)), c = {
     ...n,
     ...l
 };
 try {
-    let i = t(c), a = JSON.parse(Buffer.from(r.readFileSync(s.resolve('package.json'), JSON.parse('{"flag":"r"}'))).toString()), n = o`
+    let a = t(c), n = JSON.parse(Buffer.from(r.readFileSync(s.resolve('package.json'), JSON.parse('{"flag":"r"}'))).toString()), l = o`
   {bold USAGE}
 
-      {dim $} {bold ${Object.keys(a.bin).pop()}} [--help] --string {underline some-arg}
+      {dim $} {bold ${Object.keys(n.bin).pop()}} [--help] --string {underline some-arg}
 
   {bold OPTIONS}
       --help                 Shows this help message
@@ -49,12 +49,12 @@ try {
       --keyId {underline key-id}         Key ID for AppStore Connect API
       --issuerId {underline issuer-id}   Issuer ID for AppStore Connect API
 `;
-    void 0 !== i['--help'] && (p.error(n), process.exit(0)), void 0 !== i['--version'] && (p.info(a.version), process.exit(0)), void 0 === i['--cert'] && (p.error('The certificate file path must be specified.'), process.exit(1)), void 0 === i['--keyId'] && (p.error('Key ID must be specified.'), process.exit(1)), void 0 === i['--issuerId'] && (p.error('Issuer ID must be specified.'), process.exit(1));
-    let l = i['--cert'], d = r.readFileSync(l, JSON.parse('{"flag":"r"}')), f = e.tokenSync(d, i['--issuerId'], i['--keyId'], void 0);
+    void 0 !== a['--help'] && (p.error(l), process.exit(0)), void 0 !== a['--version'] && (p.info(n.version), process.exit(0)), void 0 === a['--cert'] && (p.error('The certificate file path must be specified.'), process.exit(1)), void 0 === a['--keyId'] && (p.error('Key ID must be specified.'), process.exit(1)), void 0 === a['--issuerId'] && (p.error('Issuer ID must be specified.'), process.exit(1));
+    let d = a['--cert'], f = r.readFileSync(d, JSON.parse('{"flag":"r"}')), u = e.tokenSync(f, a['--issuerId'], a['--keyId'], void 0);
     p.info(o`
 {bold token}
-${f}
+${u}
 `);
-} catch (e) {
-    p.error(e), process.exit(1);
+} catch (a) {
+    p.error(a), process.exit(1);
 }
