@@ -1,11 +1,11 @@
-import e from 'appstore-connect-jwt-generator-core';
-import * as r from 'fs';
-import t from 'arg';
-import o from 'chalk-template';
-import i from 'log4js';
-import s from 'path';
-i.configure(JSON.parse('{"appenders":{"out":{"layout":{"pattern":"%m%n","type":"pattern"},"type":"stdout"}},"categories":{"default":{"appenders":["out"],"level":"info"}}}'));
-let p = i.getLogger(), a = {
+import * as e from 'fs';
+import r from 'path';
+import t from 'appstore-connect-jwt-generator-core';
+import o from 'arg';
+import i from 'chalk-template';
+import s from 'log4js';
+s.configure(JSON.parse('{"appenders":{"out":{"layout":{"pattern":"%m%n","type":"pattern"},"type":"stdout"}},"categories":{"default":{"appenders":["out"],"level":"info"}}}'));
+let p = s.getLogger(), a = {
     '--help': {
         type: Boolean,
         alias: '-h'
@@ -26,21 +26,21 @@ let p = i.getLogger(), a = {
         type: String,
         alias: '-i'
     }
-}, n = Object.keys(a).map((p)=>{
-    let n = JSON.parse("{}");
-    return n[p] = a[p].type, n;
-}).reduce((p, a)=>Object.assign(a, p)), l = Object.keys(a).map((p)=>{
-    let n = JSON.parse("{}");
-    return n[a[p].alias] = p, n;
-}).reduce((p, a)=>Object.assign(a, p)), c = {
+}, n = Object.keys(a).map((e)=>{
+    let r = JSON.parse("{}");
+    return r[e] = a[e].type, r;
+}).reduce((e, r)=>Object.assign(r, e)), l = Object.keys(a).map((e)=>{
+    let r = JSON.parse("{}");
+    return r[a[e].alias] = e, r;
+}).reduce((e, r)=>Object.assign(r, e)), c = {
     ...n,
     ...l
 };
 try {
-    let a = t(c), n = JSON.parse(Buffer.from(r.readFileSync(s.resolve('package.json'), JSON.parse('{"flag":"r"}'))).toString()), l = o`
+    let s = o(c), a = JSON.parse(Buffer.from(e.readFileSync(r.resolve('package.json'), JSON.parse('{"flag":"r"}'))).toString()), n = i`
   {bold USAGE}
 
-      {dim $} {bold ${Object.keys(n.bin).pop()}} [--help] --string {underline some-arg}
+      {dim $} {bold ${Object.keys(a.bin).pop()}} [--help] --string {underline some-arg}
 
   {bold OPTIONS}
       --help                 Shows this help message
@@ -49,12 +49,12 @@ try {
       --keyId {underline key-id}         Key ID for AppStore Connect API
       --issuerId {underline issuer-id}   Issuer ID for AppStore Connect API
 `;
-    void 0 !== a['--help'] && (p.error(l), process.exit(0)), void 0 !== a['--version'] && (p.info(n.version), process.exit(0)), void 0 === a['--cert'] && (p.error('The certificate file path must be specified.'), process.exit(1)), void 0 === a['--keyId'] && (p.error('Key ID must be specified.'), process.exit(1)), void 0 === a['--issuerId'] && (p.error('Issuer ID must be specified.'), process.exit(1));
-    let d = a['--cert'], f = r.readFileSync(d, JSON.parse('{"flag":"r"}')), u = e.tokenSync(f, a['--issuerId'], a['--keyId'], void 0);
-    p.info(o`
+    void 0 !== s['--help'] && (p.error(n), process.exit(0)), void 0 !== s['--version'] && (p.info(a.version), process.exit(0)), void 0 === s['--cert'] && (p.error('The certificate file path must be specified.'), process.exit(1)), void 0 === s['--keyId'] && (p.error('Key ID must be specified.'), process.exit(1)), void 0 === s['--issuerId'] && (p.error('Issuer ID must be specified.'), process.exit(1));
+    let l = s['--cert'], d = e.readFileSync(l, JSON.parse('{"flag":"r"}')), f = t.tokenSync(d, s['--issuerId'], s['--keyId'], void 0);
+    p.info(i`
 {bold token}
-${u}
+${f}
 `);
-} catch (a) {
-    p.error(a), process.exit(1);
+} catch (e) {
+    p.error(e), process.exit(1);
 }
