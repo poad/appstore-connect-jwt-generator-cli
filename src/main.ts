@@ -1,10 +1,10 @@
+import * as fs from 'fs';
+import path from 'path';
 import TokenGenCore from 'appstore-connect-jwt-generator-core';
 
-import * as fs from 'fs';
 import arg from 'arg';
 import chalkTemplate from 'chalk-template';
 import log4js from 'log4js';
-import path from 'path';
 
 log4js.configure({
   appenders: {
