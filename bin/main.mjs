@@ -33,9 +33,7 @@ let p = s.getLogger(), a = {
     let r = JSON.parse("{}");
     return r[a[e].alias] = e, r;
 }).reduce((e, r)=>Object.assign(r, e)), c = {
-    // Types
     ...n,
-    // Aliases
     ...l
 };
 try {
