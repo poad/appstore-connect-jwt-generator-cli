@@ -30,8 +30,8 @@
     "all": "pnpm build && pnpm package && pnpm lint && pnpm test"
   },
   "devDependencies": {
-    "@swc/cli": "^0.1.63",
-    "@swc/core": "^1.3.104",
+    "@swc/cli": "^0.1.64",
+    "@swc/core": "^1.3.105",
     "@swc/helpers": "^0.5.3",
     "@swc/jest": "^0.2.31",
     "@types/jest": "^29.5.11",
