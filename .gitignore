@@ -134,3 +134,4 @@ Temporary Items
 dist
 bin/main.d.ts*
 bin/main.js.map
+node_modules
