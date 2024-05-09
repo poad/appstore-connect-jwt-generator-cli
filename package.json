@@ -31,11 +31,11 @@
   },
   "devDependencies": {
     "@swc/cli": "^0.1.65",
-    "@swc/core": "^1.5.2",
+    "@swc/core": "^1.5.5",
     "@swc/helpers": "^0.5.11",
     "@swc/jest": "^0.2.36",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.12.8",
+    "@types/node": "^20.12.11",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "@vercel/ncc": "^0.36.1",
@@ -91,5 +91,6 @@
         "@swc/jest"
       ]
     }
-  }
+  },
+  "packageManager": "pnpm@9.1.0+sha512.67f5879916a9293e5cf059c23853d571beaf4f753c707f40cb22bed5fb1578c6aad3b6c4107ccb3ba0b35be003eb621a16471ac836c87beb53f9d54bb4612724"
 }
