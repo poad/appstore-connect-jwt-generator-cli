@@ -56,7 +56,7 @@
     "rimraf": "^5.0.9",
     "swc-loader": "^0.2.6",
     "ts-node": "^10.9.2",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.4"
   },
   "dependencies": {
     "appstore-connect-jwt-generator-core": "^1.1.15",
