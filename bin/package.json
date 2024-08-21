@@ -31,11 +31,11 @@
   },
   "devDependencies": {
     "@swc/cli": "^0.1.65",
-    "@swc/core": "^1.7.11",
+    "@swc/core": "^1.7.14",
     "@swc/helpers": "^0.5.12",
     "@swc/jest": "^0.2.36",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.14.15",
+    "@types/node": "^20.16.1",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "@vercel/ncc": "^0.36.1",
