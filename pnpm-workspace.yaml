@@ -1,0 +1,6 @@
+onlyBuiltDependencies:
+  - '@swc/core'
+
+enablePrePostScripts: true
+autoInstallPeers: true
+strictPeerDependencies: false
