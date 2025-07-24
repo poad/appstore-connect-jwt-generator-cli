@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import path from 'path';
-import TokenGenCore from 'appstore-connect-jwt-generator-core';
+import * as TokenGenCore from 'appstore-connect-jwt-generator-core';
 
 import arg from 'arg';
 import chalkTemplate from 'chalk-template';
@@ -20,19 +20,13 @@ log4js.configure({
 });
 const logger = log4js.getLogger();
 
-interface ArgsDefinition {
-  [key: string]: {
-    type: StringConstructor | BooleanConstructor | NumberConstructor;
-    alias: string;
-  };
-}
+type ArgsDefinition = Record<string, {
+  type: StringConstructor | BooleanConstructor | NumberConstructor;
+  alias: string;
+}>;
 
-interface Options {
-  [key: string]: StringConstructor | BooleanConstructor | NumberConstructor;
-}
-interface Aliases {
-  [key: string]: string;
-}
+type Options = Record<string, StringConstructor | BooleanConstructor | NumberConstructor>;
+type Aliases = Record<string, string>;
 
 const argDef: ArgsDefinition = {
   '--help': {
@@ -122,10 +116,10 @@ try {
     process.exit(1);
   }
 
-  const certPath = args['--cert']!;
+  const certPath = args['--cert'] ?? '';
 
   const cert = fs.readFileSync(certPath, { flag: 'r' });
-  const token = TokenGenCore.tokenSync(cert, args['--issuerId']!, args['--keyId']!, undefined);
+  const token = await TokenGenCore.token(cert, args['--issuerId'] ?? '', args['--keyId'] ?? '', undefined);
   logger.info(chalkTemplate`
 {bold token}
 ${token}

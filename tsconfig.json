@@ -1,21 +1,16 @@
 {
-  "ts-node": {
-    "transpileOnly": true,
-    "transpiler": "ts-node/transpilers/swc-experimental"
-  },
   "compileOnSave": true,
   "compilerOptions": {
     "target": "esnext",
-    "module": "ES2020",
+    "module": "esnext",
     "outDir": "./bin",
-    "rootDir": "./src",
     "declaration": false,
     "declarationMap": false,
-    "sourceMap": false,
+    "sourceMap": true,
     "strict": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
-    "moduleResolution":"Node",
+    "moduleResolution":"bundler",
   },
   "exclude": ["node_modules", "**/*.test.ts", "bin"]
 }
