@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import path from 'path';
-import TokenGenCore from 'appstore-connect-jwt-generator-core';
+import * as TokenGenCore from 'appstore-connect-jwt-generator-core';
 import arg from 'arg';
 import chalkTemplate from 'chalk-template';
 import log4js from 'log4js';
@@ -94,9 +94,9 @@ try {
         logger.error('Issuer ID must be specified.');
         process.exit(1);
     }
-    const certPath = args['--cert'];
+    const certPath = args['--cert'] ?? '';
     const cert = fs.readFileSync(certPath, { flag: 'r' });
-    const token = TokenGenCore.tokenSync(cert, args['--issuerId'], args['--keyId'], undefined);
+    const token = await TokenGenCore.token(cert, args['--issuerId'] ?? '', args['--keyId'] ?? '', undefined);
     logger.info(chalkTemplate `
 {bold token}
 ${token}

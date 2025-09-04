@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v5
 
       - name: setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         env :
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         with:
@@ -33,6 +33,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           scope       : 'appstore-connect-jwt-generator-clie'
           always-auth : true
+          package-manager-cache: false
 
       - uses: pnpm/action-setup@v4  
         name: Install pnpm
