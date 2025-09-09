@@ -1,6 +1,10 @@
-onlyBuiltDependencies:
-  - '@swc/core'
+autoInstallPeers: true
 
 enablePrePostScripts: true
-autoInstallPeers: true
+
+onlyBuiltDependencies:
+  - '@swc/core'
+  - esbuild
+  - unrs-resolver
+
 strictPeerDependencies: false
