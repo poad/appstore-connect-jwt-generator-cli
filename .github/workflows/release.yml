@@ -31,12 +31,11 @@ jobs:
         with:
           node-version: 'lts/*'
           registry-url: 'https://registry.npmjs.org'
-          scope       : 'appstore-connect-jwt-generator-core'
+          scope       : 'appstore-connect-jwt-generator-cli'
           package-manager-cache: false
 
       - name: Can Publish
         run : npx can-npm-publish --verbose
-        working-directory: package
 
       - name: Install latest npm
         run: |
@@ -53,8 +52,6 @@ jobs:
 
       - name: Build
         run : pnpm build
-        working-directory: package
 
       - name: Publish
         run : pnpm -r publish --no-git-checks --access public --provenance
-        working-directory: package
