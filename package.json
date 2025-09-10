@@ -5,7 +5,7 @@
   "license": "MIT",
   "private": false,
   "homepage": "https://github.com/poad/appstore-connect-jwt-generator-cli#readme",
-  "main": "bin/index.js",
+  "main": "bin/cli.js",
   "bin": {
     "jwt-gen": "./bin/cli.js",
     "appstore-jwt-gen": "./bin/cli.js"
@@ -24,12 +24,11 @@
   "preferGlobal": false,
   "scripts": {
     "test": "vitest run --silent=false --coverage --passWithNoTests",
-    "clean": "tsc --build --clean",
-    "compile": "tsc",
+    "prebuild": "tsc --build --clean",
     "watch": "tsc --watch",
-    "build": "pnpm clean && pnpm compile",
+    "build": "tsc",
     "dev": "tsx src/main.ts",
-    "package": "ncc build --source-map --license licenses.txt -m -q -o bin",
+    "package": "ncc build --license licenses.txt -m -q -o bin && chmod +x bin/cli.js",
     "lint": "eslint",
     "lint-fix": "eslint --fix",
     "all": "pnpm build && pnpm package && pnpm lint && pnpm test"
