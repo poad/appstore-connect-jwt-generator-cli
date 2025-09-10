@@ -6,7 +6,7 @@
     "outDir": "./bin",
     "declaration": false,
     "declarationMap": false,
-    "sourceMap": true,
+    "sourceMap": false,
     "strict": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
