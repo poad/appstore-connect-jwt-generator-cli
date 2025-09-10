@@ -20,24 +20,16 @@ on:
   schedule:
     - cron: '34 3 * * 1'
 
-permissions:
-  actions: read
-  checks: write
-  contents: none
-  deployments: none
-  issues: none
-  packages: none
-  repository-projects: none
-  statuses: write
 
 jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
     permissions:
+      security-events: write
+      packages: read
       actions: read
       contents: read
-      security-events: write
 
     strategy:
       fail-fast: false

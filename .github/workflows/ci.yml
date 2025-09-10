@@ -9,16 +9,6 @@ on:
 
   workflow_dispatch:
 
-permissions:
-  actions: read
-  checks: write
-  contents: none
-  deployments: none
-  issues: none
-  packages: none
-  repository-projects: none
-  statuses: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
