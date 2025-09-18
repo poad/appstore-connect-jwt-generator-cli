@@ -8,3 +8,9 @@ onlyBuiltDependencies:
   - unrs-resolver
 
 strictPeerDependencies: false
+
+# one day
+minimumReleaseAge: 1440
+minimumReleaseAgeExclude:
+ - pnpm
+ - appstore-connect-jwt-generator-core

@@ -4,6 +4,9 @@ updates:
     directory: /
     schedule:
       interval: daily
+      timezone: Asia/Tokyo
+    cooldown:
+      default-days: 1
     allow:
       - dependency-type: all
     rebase-strategy: auto
@@ -15,16 +18,23 @@ updates:
           - '*'
 
   - package-ecosystem: npm
-    directory: '/'
+    directories:
+      - '/package/'
+      - '/tests/'
     schedule:
       interval: daily
       timezone: Asia/Tokyo
+    cooldown:
+      default-days: 1
+      exclude:
+        - 'pnpm'
+        - 'appstore-connect-jwt-generator-core'
     allow:
       - dependency-type: all
     rebase-strategy: auto
     assignees:
       - poad
     groups:
-      esm:
+      npm:
         patterns:
           - '*'
