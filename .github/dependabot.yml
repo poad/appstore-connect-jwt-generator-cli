@@ -6,7 +6,7 @@ updates:
       interval: daily
       timezone: Asia/Tokyo
     cooldown:
-      default-days: 1
+      default-days: 3
     allow:
       - dependency-type: all
     rebase-strategy: auto
@@ -23,7 +23,7 @@ updates:
       interval: daily
       timezone: Asia/Tokyo
     cooldown:
-      default-days: 1
+      default-days: 3
       exclude:
         - 'pnpm'
         - 'appstore-connect-jwt-generator-core'
