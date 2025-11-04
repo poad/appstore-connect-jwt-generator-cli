@@ -14,3 +14,7 @@ minimumReleaseAge: 1440
 minimumReleaseAgeExclude:
  - pnpm
  - appstore-connect-jwt-generator-core
+
+overrides:
+  '@eslint/js@=9.39.0': "^9.39.1"
+  'eslint@=9.39.0': "^9.39.1"
