@@ -2,19 +2,20 @@ autoInstallPeers: true
 
 enablePrePostScripts: true
 
+minimumReleaseAge: 1440
+
+minimumReleaseAgeExclude:
+  - pnpm
+  - appstore-connect-jwt-generator-core
+
 onlyBuiltDependencies:
   - '@swc/core'
   - esbuild
   - unrs-resolver
 
-strictPeerDependencies: false
-
-# one day
-minimumReleaseAge: 1440
-minimumReleaseAgeExclude:
- - pnpm
- - appstore-connect-jwt-generator-core
-
 overrides:
-  '@eslint/js@=9.39.0': "^9.39.1"
-  'eslint@=9.39.0': "^9.39.1"
+  '@eslint/js@=9.39.0': ^9.39.1
+  diff@<8.0.3: '>=8.0.3'
+  eslint@=9.39.0: ^9.39.1
+
+strictPeerDependencies: false
