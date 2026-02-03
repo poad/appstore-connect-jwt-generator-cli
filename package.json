@@ -34,7 +34,7 @@
     "all": "pnpm build && pnpm package && pnpm lint && pnpm test"
   },
   "devDependencies": {
-    "@eslint/compat": "^2.0.1",
+    "@eslint/compat": "^2.0.2",
     "@eslint/js": "^9.39.2",
     "@stylistic/eslint-plugin": "^5.7.1",
     "@types/node": "^25.1.0",
