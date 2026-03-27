@@ -39,7 +39,7 @@
     "@stylistic/eslint-plugin": "^5.10.0",
     "@types/node": "^25.5.0",
     "@vercel/ncc": "^0.38.4",
-    "@vitest/coverage-v8": "^4.1.1",
+    "@vitest/coverage-v8": "^4.1.2",
     "eslint": "^10.1.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-typescript": "^4.4.4",
@@ -53,9 +53,9 @@
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.57.2",
-    "vite": "^8.0.2",
+    "vite": "^8.0.3",
     "vite-tsconfig-paths": "^6.1.1",
-    "vitest": "^4.1.1"
+    "vitest": "^4.1.2"
   },
   "dependencies": {
     "appstore-connect-jwt-generator-core": "^2.0.6",
