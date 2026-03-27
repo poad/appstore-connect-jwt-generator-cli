@@ -2,7 +2,8 @@
   "compileOnSave": true,
   "compilerOptions": {
     "target": "esnext",
-    "module": "esnext",
+    "module": "nodenext",
+    "rootDir": "src",
     "outDir": "./bin",
     "declaration": false,
     "declarationMap": false,
@@ -10,7 +11,8 @@
     "strict": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
-    "moduleResolution":"bundler",
+    "moduleResolution":"nodenext",
+    "types": ["node"]
   },
   "exclude": ["node_modules", "**/*.test.ts", "bin"],
   "include": ["src"]
