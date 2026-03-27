@@ -3,6 +3,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "nodenext",
+    "rootDir": "src",
     "outDir": "./bin",
     "declaration": false,
     "declarationMap": false,
