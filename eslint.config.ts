@@ -1,10 +1,8 @@
 import { defineConfig } from 'eslint/config';
 import eslint from '@eslint/js';
-import { configs, parser } from 'typescript-eslint';
 import stylistic from '@stylistic/eslint-plugin';
-import importPlugin from 'eslint-plugin-import';
-// @ts-expect-error ignore type errors
-import pluginPromise from 'eslint-plugin-promise';
+import { configs, parser } from 'typescript-eslint';
+import eslintImport from 'eslint-plugin-import-x';
 
 import { includeIgnoreFile } from '@eslint/compat';
 import path from 'node:path';
@@ -14,27 +12,24 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const gitignorePath = path.resolve(__dirname, '.gitignore');
 
-const eslintConfig = defineConfig(
+export default defineConfig(
+  includeIgnoreFile(gitignorePath),
   {
     ignores: [
-      ...(includeIgnoreFile(gitignorePath).ignores || []),
       '**/*.d.ts',
-      'src/tsconfig.json',
-      'src/stories',
-      '**/*.css',
+      '**/*.js',
       'node_modules/**/*',
       'out',
-      'cdk.out',
       'dist',
-      'bin',
+      'cdk.out',
+      '.output',
     ],
   },
   eslint.configs.recommended,
-  configs.strict,
-  configs.stylistic,
-  pluginPromise.configs['flat/recommended'],
+  ...configs.strict,
+  ...configs.stylistic,
   {
-    files: ['**/*.ts', '*.js'],
+    files: ['{bin,lib,lambda}/**/*.{ts,tsx}', '*.js'],
     plugins: {
       '@stylistic': stylistic,
     },
@@ -44,15 +39,15 @@ const eslintConfig = defineConfig(
       parser,
       parserOptions: {
         tsconfigRootDir: __dirname,
-        project: './tsconfig-eslint.json',
+        allowDefaultProject: ['*.ts'],
       },
     },
     extends: [
-      importPlugin.flatConfigs.recommended,
-      importPlugin.flatConfigs.typescript,
+      eslintImport.flatConfigs.recommended,
+      eslintImport.flatConfigs.typescript,
     ],
     settings: {
-      'import/resolver': {
+      'import-x/resolver': {
         // You will also need to install and configure the TypeScript resolver
         // See also https://github.com/import-js/eslint-import-resolver-typescript#configuration
         'typescript': true,
@@ -63,10 +58,8 @@ const eslintConfig = defineConfig(
       '@stylistic/semi': ['error', 'always'],
       '@stylistic/indent': ['error', 2],
       '@stylistic/comma-dangle': ['error', 'always-multiline'],
-      '@stylistic/arrow-parens': ['error', 'always'],
       '@stylistic/quotes': ['error', 'single'],
+      'awscdk/require-jsdoc': 'off',
     },
   },
 );
-
-export default eslintConfig;
