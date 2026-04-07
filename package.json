@@ -34,13 +34,13 @@
     "all": "pnpm build && pnpm package && pnpm lint && pnpm test"
   },
   "devDependencies": {
-    "@eslint/compat": "^2.0.3",
+    "@eslint/compat": "^2.0.4",
     "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.10.0",
-    "@types/node": "^25.5.0",
+    "@types/node": "^25.5.2",
     "@vercel/ncc": "^0.38.4",
     "@vitest/coverage-v8": "^4.1.2",
-    "eslint": "^10.1.0",
+    "eslint": "^10.2.0",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import-x": "^4.16.2",
     "eslint-plugin-promise": "^7.2.1",
