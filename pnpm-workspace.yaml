@@ -1,19 +1,15 @@
-autoInstallPeers: true
+enablePrePostScripts: false
 
-enablePrePostScripts: true
-
-minimumReleaseAge: 1440
-
+minimumReleaseAge: 10080 # 7 days in minutes
 minimumReleaseAgeExclude:
-  - pnpm
+  - esbuild@0.27.7
+  - '@esbuild/*'
+  - vite@8.0.7
   - appstore-connect-jwt-generator-core
 
-onlyBuiltDependencies:
-  - '@swc/core'
-  - esbuild
-  - unrs-resolver
-
 overrides:
+  '@types/node': ^24
   minimatch@<10.2.1: '>=10.2.1'
+  vite@>=8.0.0 <=8.0.4: '>=8.0.5'
 
 strictPeerDependencies: false
