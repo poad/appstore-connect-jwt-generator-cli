@@ -1,15 +1,20 @@
+allowBuilds:
+  esbuild: false
+  unrs-resolver: false
+
 enablePrePostScripts: false
+
+
+blockExoticSubdeps: true
 
 minimumReleaseAge: 10080 # 7 days in minutes
 minimumReleaseAgeExclude:
-  - esbuild@0.27.7
-  - '@esbuild/*'
-  - vite@8.0.7
-  - appstore-connect-jwt-generator-core
+  - ppstore-connect-jwt-generator-core
 
 overrides:
-  '@types/node': ^24
-  minimatch@<10.2.1: '>=10.2.1'
-  vite@>=8.0.0 <=8.0.4: '>=8.0.5'
+  eslint-import-resolver-typescript: '^4.4.4'
+  semver: '>=7'
 
 strictPeerDependencies: false
+
+trustPolicy: no-downgrade
