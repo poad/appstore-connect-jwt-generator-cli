@@ -23,7 +23,7 @@ updates:
       interval: daily
       timezone: Asia/Tokyo
     cooldown:
-      default-days: 3¥7
+      default-days: 7
       exclude:
         - 'pnpm'
         - 'appstore-connect-jwt-generator-core'
