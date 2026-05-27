@@ -2,43 +2,45 @@ name: CI
 
 on:
   push:
-    branches:    
-    - main 
+    branches:
+    - main
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
-  workflow_dispatch:
-
+  workflow_dispatch: null
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+    - name: Checkout
+      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      with:
+        persist-credentials: false
 
-      - name: Use Node.js
-        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
-        with:
-          node-version: 'lts/*'
-          check-latest: true
-          package-manager-cache: false
+    - name: Use Node.js
+      uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
+      with:
+        node-version: 'lts/*'
+        check-latest: true
+        package-manager-cache: false
 
-      - uses: pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093 # v6.0.8
-        name: Install pnpm
-        with:
-          run_install: |
-            - recursive: true
-              args: [--no-frozen-lockfile]
-              
-      - name: Build & test
-        env:
-          APPSTORE_ISSUER_ID: ${{ secrets.APPSTORE_ISSUER_ID }}
-          APPSTORE_KEY_ID: ${{ secrets.APPSTORE_KEY_ID }}
-          APPSTORE_PRIVATE_KEY: ${{ secrets.APPSTORE_PRIVATE_KEY }}
-          APPSTORE_PRIVATE_KEY_FILE_PATH: '/tmp/privateKey.p8'
-          NODE_ENV: test
-        run: |
-          echo ${APPSTORE_PRIVATE_KEY} | base64 -d > ${APPSTORE_PRIVATE_KEY_FILE_PATH}
-          echo "" >> ${APPSTORE_PRIVATE_KEY_FILE_PATH}
-          pnpm all
+    - uses: pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093 # v6.0.8
+      name: Install pnpm
+      with:
+        run_install: |
+          - recursive: true
+            args: [--no-frozen-lockfile]
+            
+
+    - name: Build & test
+      env:
+        APPSTORE_ISSUER_ID: ${{ secrets.APPSTORE_ISSUER_ID }}
+        APPSTORE_KEY_ID: ${{ secrets.APPSTORE_KEY_ID }}
+        APPSTORE_PRIVATE_KEY: ${{ secrets.APPSTORE_PRIVATE_KEY }}
+        APPSTORE_PRIVATE_KEY_FILE_PATH: '/tmp/privateKey.p8'
+        NODE_ENV: test
+      run: |
+        echo ${APPSTORE_PRIVATE_KEY} | base64 -d > ${APPSTORE_PRIVATE_KEY_FILE_PATH}
+        echo "" >> ${APPSTORE_PRIVATE_KEY_FILE_PATH}
+        pnpm all

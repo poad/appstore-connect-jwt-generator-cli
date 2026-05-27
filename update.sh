@@ -16,7 +16,7 @@ fi
 echo ""
 pwd
 
-if ! (pnpm self-update && pnpm install && pnpm up -r && pnpm audit --fix override && pnpm up -r && rm -rf bin && pnpm build && pnpm package && rm -rf node_modules && pnpm install --production && git add bin node_modules -f); then
+if ! (disable-checkout-persist-credentials && pnx pnpm self-update && pnpm install && pnpm up -r && pnpm audit --fix override && pnpm up -r && rm -rf bin && pnpm build && pnpm package && rm -rf node_modules && pnpm install --production && git add bin node_modules -f); then
   cd "${CUR}" || exit
   exit 1
 fi
