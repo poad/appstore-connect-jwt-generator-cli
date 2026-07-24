@@ -27,6 +27,9 @@ updates:
       exclude:
         - 'pnpm'
         - 'appstore-connect-jwt-generator-core'
+    ignore:
+      - dependency-name: typescript
+        versions: ~7.0.0
     allow:
       - dependency-type: all
     rebase-strategy: auto
